@@ -57,3 +57,14 @@ function newNonPlayableCharacter(x, y) {
         stop: stop
     }
 }
+
+function walkEast(time, callback) {
+    direction = 'east'
+    element.src = `./assets/green-character/east.gif`
+    setTimeout(() => {
+        stop()
+        if(callback){
+            callback()
+        }
+    }, time)
+}
